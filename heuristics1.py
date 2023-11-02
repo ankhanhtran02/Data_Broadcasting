@@ -30,17 +30,6 @@ class Node:
         self.visited = False
         self.total_time = 0 # thời gian từ root tới node hiện tại
 
-# def solve(cur_node,time_matrix,D):
-#     cur_node.neighbors.sort(key = lambda candidate: time_matrix[cur_node.ID][candidate.ID])
-#     for candidate in cur_node.neighbors:
-#         if not candidate.visited and cur_node.total_time + time_matrix[cur_node.ID][candidate.ID] <= D:
-#             cur_node.children.append(candidate)                  
-#             candidate.total_time = cur_node.total_time + time_matrix[cur_node.ID][candidate.ID]
-#             candidate.parent = cur_node
-#             candidate.visited = True
-#     for node in cur_node.children:
-#         solve(node,time_matrix,D)
-
 def solve(root, time_matrix, D):
     stack = [root]
     while stack:
